@@ -516,8 +516,9 @@ console.log("This house at " + listing1.address + "is owned by " + listing1.curr
 
 realtorFees(listings)
 {
- listings.price <= "450000" ? realtorFee = listings.price*2.5: 
- listings.price > "450000" ? realtorFee = listings.price*2 
+   listings.price <= "450000" ? realtorFee = listings.price*2.5: 
+   listings.price > "450000" ? realtorFee = listings.price*2:
+   "This house has no listing price"
 };
 
 /**
