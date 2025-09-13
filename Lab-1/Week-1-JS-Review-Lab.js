@@ -477,14 +477,18 @@ const listings = [
  * from the array above
  */
 //WRITE YOUR CODE BELOW
-
+const listing0 = listings[0];
 /**
  * Task-2: create an object named listing1 using the spread operator and add 2 new properties,
  * isSold which is a boolean set to false,
  * and currentOwner which is a string with the value of Jane Doe
  */
 //WRITE YOUR CODE BELOW
-
+const listing1 ={
+  ... 
+  isSold =false,
+  currentOwner :"Jane Doe"
+}
 /**
  * Task-3: print to console a text using template literals that contains the name of the owner,
  * and their current address for listing1.
@@ -492,6 +496,8 @@ const listings = [
  * "This house at (address) is owned by (currentOwner)"
  */
 //WRITE YOUR CODE BELOW
+
+console.log("This house at " + listing1.address + "is owned by " + listing1.currentOwner)
 
 /**
  * NOTE: THIS TASK IS TRICKY!
@@ -508,13 +514,22 @@ const listings = [
  */
 //WRITE YOUR CODE BELOW
 
+realtorFees(listings)
+{
+ listings.price <= "450000" ? realtorFee = listings.price*2.5: 
+ listings.price > "450000" ? realtorFee = listings.price*2 
+};
+
 /**
  * Task-5: Sort the listing array ascendingly in a new variable called listingAscendingly
  */
 //WRITE YOUR CODE BELOW
+const listingAscendingly = listings.slice().sort((a,b) => a.price - b.price);
 
 /**
  * Task-6: filter all the listings by bulitIn propertity for all houses built on or after 1990.
  * Name the variable newBuiltListings
  */
 //WRITE YOUR CODE BELOW
+const newBuiltListings = listings.filter((listings) => 
+listings.builtIn.includes("1990"));
